@@ -19,6 +19,7 @@ for j in $(ls -d *); do
 	mv */* ../$base.data.dir
 	rm ../$base.data.dir/*xml      ### gets rid of xml files from biosamples and clinical 
 	rm ../$base.data.dir/*FPKM*    ### gets rid of FPKM counts in transcriptome profiling
+	rm ../$base.data.dir/*star*    ### gets rid of STAR data in transcriptome profiling
 	rm -r *
 	cd ..
 	rm -r $base.dir
