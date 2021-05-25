@@ -29,3 +29,7 @@ cd ..
 ##  cat OHSU-CNL.htseq.all.tsv.bk | head -1 | perl -ane 'foreach $i (0..$#F){print "\tOHSU-CNL-".$F[$i]}' | sed 's/^     OHSU-CNL-//g'  > OHSU-CNL.htseq.all.tsv
 ##  cat OHSU-CNL.htseq.all.tsv.bk | tail -n +2 >> OHSU-CNL.htseq.all.tsv 
 
+### consolidate, if desired
+## for i in $(ls /home/cdavies/GDC_DOWNLOADS/*/*.unpacked/data.Gene_Expression_Quantification.data.dir/*.htseq.all.tsv); do cut -f2- $i > $i.no_ens_label; done
+## paste BEATAML1.0-COHORT/BEATAML1.0-COHORT.unpacked/data.Gene_Expression_Quantification.data.dir/aaa_pasteable_genelist.txt /home/cdavies/GDC_DOWNLOADS/*/*.unpacked/data.Gene_Expression_Quantification.data.dir/*.htseq.all.tsv.no_ens_label > GDC_Projects.htseq.all.tsv
+
